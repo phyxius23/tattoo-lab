@@ -15,10 +15,10 @@ import Jumbotron from "@/app/components/Jumbotron";
 // }
 
 async function getData(): Promise<CrewState> {
-	// const res = await fetch(process.env.API_ARTISTTWO);
-	const res = await fetch(
-		"https://my-json-server.typicode.com/phyxius23/tattoo-be-artisttwo/auraNegativaPage"
-	);
+	const res = await fetch(process.env.API_ARTISTTWO);
+	// const res = await fetch(
+	// 	"https://my-json-server.typicode.com/phyxius23/tattoo-be-artisttwo/auraNegativaPage"
+	// );
 	return res.json();
 }
 

@@ -19,10 +19,10 @@ import ContactForm from "@/app/components/ContactForm";
 // }
 
 async function getData(): Promise<PageState> {
-	// const res = await fetch(process.env.API_CONTACT);
-	const res = await fetch(
-		"https://my-json-server.typicode.com/phyxius23/tattoo-be-piercing-contact/contactPage"
-	);
+	const res = await fetch(process.env.API_CONTACT);
+	// const res = await fetch(
+	// 	"https://my-json-server.typicode.com/phyxius23/tattoo-be-piercing-contact/contactPage"
+	// );
 	return res.json();
 }
 
