@@ -211,7 +211,7 @@ textarea:focus-visible {
 /*.splide__slide {*/
 /*    @apply p-[2%];*/
 /*}*/
-.splide__arrow {
+button.splide__arrow {
 	@apply h-12 w-12 bg-gold;
 }
 .gallery img {
