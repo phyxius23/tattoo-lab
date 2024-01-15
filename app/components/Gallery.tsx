@@ -27,7 +27,7 @@ export default function Gallery({ title, images }: GalleryProps) {
 				<h2 className="text-center mb-12 fade-up">{title}</h2>
 
 				<Splide
-					aria-label="My Favorite Images"
+					aria-label="Carousel"
 					options={{
 						mediaQuery: "min",
 						perPage: 1,

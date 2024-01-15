@@ -69,6 +69,7 @@ export default function ArtistsSection({ title, bgImage, artists }: ArtistsSecti
 									<figure>
 										<Link
 											href={`/artista/${artist.title.toLowerCase().replace(" ", "-")}`}
+											aria-label={artist.description}
 										>
 											<Image
 												src={artist.image.url}
