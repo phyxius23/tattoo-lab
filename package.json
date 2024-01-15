@@ -6,8 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"server": "json-server --watch server/db.json --port 8080"
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"@gsap/react": "^2.0.2",
