@@ -1,0 +1,344 @@
+/* Google Fonts */
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif&display=swap');*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition Variables */
+:root {
+	--color-navbar: #0f1010;
+	--color-dark: #1d1f21;
+	--color-gold: #d7b474;
+}
+body {
+	@apply bg-[--color-dark] text-white font-sans;
+}
+
+/* Title System */
+/* -------------------------------------------------------------------------------- */
+h1,
+h2 {
+	@apply font-normal font-serif;
+}
+h3,
+h4,
+h5,
+h6 {
+	@apply font-bold;
+}
+.text-0 {
+	@apply text-[3rem] md:text-[5rem] leading-normal;
+}
+h1,
+.text-1 {
+	@apply text-[2rem] md:text-[3.5rem] leading-normal uppercase;
+}
+h2,
+.text-2 {
+	@apply text-[1.5rem] md:text-[2.8rem] leading-normal uppercase;
+}
+h3,
+.text-3 {
+	@apply text-[1.3rem] md:text-[1.7rem] leading-normal;
+}
+h4,
+.text-4 {
+	@apply text-[1rem] md:text-[1.3rem] leading-normal;
+}
+h5,
+p,
+a,
+.text-5 {
+	@apply text-[0.8rem] md:text-[1rem] leading-normal;
+}
+h6,
+.text-6 {
+	@apply text-[0.7rem] md:text-[0.8rem] leading-normal;
+}
+
+/* Button System */
+/* -------------------------------------------------------------------------------- */
+.btn {
+	/*@apply inline-block text-[--color-gold] bg-[#d7b474]/[.4] border-2 border-[#d7b474]/0 hover:bg-[#d7b474]/[.0] hover:border-[#d7b474]/100 uppercase py-4 px-8 ;*/
+	@apply inline-block text-gold bg-gold/[.4] border-2 border-gold/0 hover:bg-gold/[.0] hover:border-gold/100 uppercase py-4 px-8;
+	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Form Reset */
+/* -------------------------------------------------------------------------------- */
+input:focus-visible,
+textarea:focus-visible {
+	outline: unset;
+}
+
+/* Navbar */
+/* -------------------------------------------------------------------------------- */
+.navbar {
+	@apply fixed top-0 left-0 right-0 p-4 transition-all z-30 bg-[#0F1010]/100 md:bg-[#0F1010]/85;
+}
+.navbar__content {
+	@apply max-w-screen-xl mx-auto flex justify-between items-center;
+}
+.navbar__menu {
+	@apply absolute top-full left-0 right-0 h-0 overflow-hidden flex flex-col items-center justify-around transition-all z-30
+            md:relative md:h-auto md:top-auto md:flex-row md:gap-0 bg-[#0F1010]/100 md:bg-transparent;
+}
+.navbar__menu li {
+	@apply font-serif uppercase transition-all md:py-1.5 md:px-6 hover:text-gold;
+}
+.navbar__menu li:not(:last-child) {
+	@apply md:border-r-2;
+}
+.navbar__menu li a {
+	@apply text-[1rem];
+}
+/*.navbar__menu li:hover {*/
+/*    @apply text-gold;*/
+/*}*/
+
+/* Burger Button */
+.navbar__burger {
+	@apply block w-7 h-6 relative md:hidden;
+}
+.navbar__burger .line {
+	@apply block h-0.5 absolute left-0 right-0 bg-white transition-all;
+}
+.navbar__burger .line:nth-of-type(1) {
+	@apply top-0;
+}
+.navbar__burger .line:nth-of-type(2) {
+	@apply top-[11px];
+}
+.navbar__burger .line:nth-of-type(3) {
+	@apply top-[22px];
+}
+
+/* Menu Open */
+/*.menu-open{overflow: hidden;}*/
+.menu-open .navbar__menu {
+	height: calc(100vh - 82px);
+}
+.menu-open .navbar__burger .line:nth-of-type(1) {
+	transform: translateY(11px) rotate(45deg);
+}
+.menu-open .navbar__burger .line:nth-of-type(2) {
+	width: 0;
+}
+.menu-open .navbar__burger .line:nth-of-type(3) {
+	transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Footer */
+/* -------------------------------------------------------------------------------- */
+/* Contact */
+.footer-contact {
+	@apply flex flex-wrap justify-around py-7;
+}
+.footer-contact li {
+	@apply mb-1.5 relative;
+}
+.footer-contact li:last-of-type {
+	@apply mb-0;
+}
+.footer-contact img {
+	@apply absolute top-1/2 left-0 -translate-y-1/2 invert w-4 mr-5;
+}
+.footer-contact a,
+.footer-contact span {
+	@apply ml-6;
+	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.footer-contact a:hover {
+	@apply text-[--color-gold];
+}
+.footer-privacy {
+	@apply py-5 bg-[#0f1010] text-[--color-gold];
+}
+
+/* Privacy */
+.footer-privacy__content {
+	@apply flex flex-wrap items-center md:justify-between;
+}
+.footer-privacy a {
+	@apply font-serif text-[--color-gold] hover:text-white;
+	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Cover */
+/* -------------------------------------------------------------------------------- */
+.cover {
+	@apply min-h-screen w-full flex flex-col items-center justify-center text-center bg-black text-white relative p-5;
+}
+.cover::after {
+	@apply content-[''] w-full h-full absolute top-0 left-0 bg-black/70;
+}
+.cover__content {
+	@apply max-w-[815px] relative z-10;
+}
+/* questo nella pagina contatti non è presente magari torna utile nelle altre */
+.cover__content h2 {
+	@apply font-sans text-[1.1rem] md:text-[1.3rem] font-bold leading-[1.75] tracking-[1px] uppercase;
+}
+.cover--image {
+	@apply min-h-[60vh] md:min-h-[600px];
+}
+
+/* Media Text */
+/* -------------------------------------------------------------------------------- */
+.media-text {
+	@apply flex flex-wrap items-stretch overflow-x-hidden; /*  items-stretch */
+}
+.media-text figure {
+	@apply bg-center bg-cover h-full min-h-[365px] relative overflow-hidden; /* overflow-y-hidden */
+}
+/* .media-text figure img {
+	@apply absolute top-0 left-0 w-full h-full object-cover;
+} */
+.media-text .text {
+	@apply self-center;
+}
+.media-text .text p {
+	@apply mb-4 md:last-of-type:mb-0;
+}
+/* Studio | Section */
+.studio-content > div:nth-child(3) .media {
+	@apply order-2;
+}
+
+/* Gallery | Section */
+/* -------------------------------------------------------------------------------- */
+/*.splide__slide {*/
+/*    @apply p-[2%];*/
+/*}*/
+.splide__arrow {
+	@apply h-12 w-12 bg-gold;
+}
+.gallery img {
+	@apply rounded-t-xl;
+}
+.gallery .gallery__label {
+	@apply absolute bottom-0 left-0 right-0 py-4 px-5 z-20 bg-black/75 italic text-gold text-right;
+}
+
+/* Crew | Section */
+/* -------------------------------------------------------------------------------- */
+.artists::after {
+	@apply content-[''] absolute top-0 left-0 w-full h-full z-10 bg-black/75;
+}
+.artists__card {
+	@apply bg-black/50 p-8 text-center;
+}
+
+/* Jumbotron | Section */
+/* -------------------------------------------------------------------------------- */
+.piercing {
+	@apply min-h-[430px] p-4 flex items-center justify-center relative;
+}
+.piercing::after {
+	@apply content-[''] absolute top-0 left-0 right-0 h-full z-10 bg-black/55;
+}
+.piercing h2 {
+	@apply text-[2.25rem];
+}
+.piercing > div {
+	@apply w-11/12 mx-auto relative z-20;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Page - Page - Page - Page - Page - Page - Page */
+/* -------------------------------------------------------------------------------- */
+
+/* Artist | Page */
+/* -------------------------------------------------------------------------------- */
+.artist-main h1 {
+	@apply text-gold;
+}
+
+.artist-main .media-text .media,
+.piercing-main .media-text .media {
+	@apply order-2;
+}
+
+/* Contact | Page */
+/* -------------------------------------------------------------------------------- */
+.form-container p {
+	@apply mb-4;
+	/*  last-of-type:mb-0  */
+}
+/* Form */
+input[type="text"],
+input[type="email"],
+textarea {
+	@apply w-full bg-white/10 text-white resize-none p-2.5 mb-5;
+}
+form label:not(.label-policy) {
+	@apply block text-gold font-bold uppercase mb-2.5;
+}
+form .label-policy {
+	@apply inline ml-2.5;
+}
+form .btn {
+	@apply block;
+}
+/*.wpcf7-not-valid-tip{*/
+/*    color: #fff;*/
+/*    font-size: 13px;*/
+/*}*/
+/*.wp-block-button__link:active,*/
+/*.wp-block-button__link:focus,*/
+/*.wp-block-button__link:hover,*/
+/*.wp-block-button__link:visited{*/
+/*    color: #D7B474;*/
+/*}*/
+
+/* Utilities */
+/* -------------------------------------------------------------------------------- */
+.container {
+	@apply max-w-screen-xl mx-auto px-5;
+	/* flex flex-wrap items-center md:justify-between */
+}
+.container-fluid {
+	@apply w-screen;
+	/* flex flex-wrap items-center md:justify-between */
+}
+.spacer-navbar {
+	@apply mt-[83px];
+}
+.img-fluid {
+	@apply w-full h-auto;
+}
+
+/* ! Animation */
+/* -------------------------------------------------------------------------------- */
+.fade-in {
+	@apply opacity-0 translate-y-4;
+}
+.fade-up {
+	@apply opacity-0 translate-y-20;
+}
+.text-reveal {
+	@apply translate-y-4;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.slide-right figure {
+	@apply relative right-[-500px];
+}
+.slide-right .text {
+	@apply order-2 md:order-none;
+}
+.slide-left figure,
+.slide-left-bis figure {
+	@apply relative left-[-500px];
+}
+/*.slide-left-bis figure {*/
+/*    @apply relative left-[-500px];*/
+/*}*/
+
+/* funziona */
+.biography .text > div {
+	@apply relative left-[-500px] md:left-[-1500px];
+}
+.biography .media figure {
+	@apply relative right-[-500px] md:right-[-1500px];
+}
