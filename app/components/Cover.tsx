@@ -11,7 +11,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { CoverState } from "@/app/models";
 import { fadeIn, textReveal } from "@/app/utils";
-import { usePathname } from "next/navigation";
 
 export interface CoverProps {
 	data: CoverState;
@@ -19,7 +18,6 @@ export interface CoverProps {
 }
 
 export default function Cover({ data, addClass }: CoverProps) {
-	const pathname = usePathname();
 	const { title, subtitle, link, image } = data;
 
 	const containerRef = useRef(null);
