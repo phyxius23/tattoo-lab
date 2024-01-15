@@ -1,18 +1,19 @@
 import { CrewState } from "@/app/models";
+
 import Cover from "@/app/components/Cover";
 import MediaText from "@/app/components/MediaText";
 import Gallery from "@/app/components/Gallery";
 import Jumbotron from "@/app/components/Jumbotron";
 
-// export const metadata = {
-//     title: 'Piercing - Metadata Title',
-//     description: 'Piercing - Metadata Description',
-//     // you can also set openGraph metadata
-//     openGraph: {
-//         title: 'Piercing - Metadata Title',
-//         description: 'Piercing - Metadata Description',
-//     },
-// }
+export const metadata = {
+	title: "Tommy Grossi",
+	description: "Tommy Grossi - Metadata Description",
+	// you can also set openGraph metadata
+	// openGraph: {
+	// 	title: "Piercing - Metadata Title",
+	// 	description: "Piercing - Metadata Description",
+	// },
+};
 
 async function getData(): Promise<CrewState> {
 	const res = await fetch(process.env.API_ARTISTONE);

@@ -8,15 +8,15 @@ import ArtistsSection from "@/app/components/ArtistsSection";
 import Jumbotron from "@/app/components/Jumbotron";
 import ContactForm from "@/app/components/ContactForm";
 
-// export const metadata = {
-//     title: 'Piercing - Metadata Title',
-//     description: 'Piercing - Metadata Description',
-//     // you can also set openGraph metadata
-//     openGraph: {
-//         title: 'Piercing - Metadata Title',
-//         description: 'Piercing - Metadata Description',
-//     },
-// }
+export const metadata = {
+	title: "Contatti",
+	description: "Contatti - Metadata Description",
+	// you can also set openGraph metadata
+	//  openGraph: {
+	//      title: 'Piercing - Metadata Title',
+	//      description: 'Piercing - Metadata Description',
+	//  },
+};
 
 async function getData(): Promise<PageState> {
 	const res = await fetch(process.env.API_CONTACT);
