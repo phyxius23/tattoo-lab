@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { CoverState } from "@/app/models";
 import { fadeIn, textReveal } from "@/app/utils";
+import { usePathname } from "next/navigation";
 
 export interface CoverProps {
 	data: CoverState;
@@ -18,6 +19,7 @@ export interface CoverProps {
 }
 
 export default function Cover({ data, addClass }: CoverProps) {
+	const pathname = usePathname();
 	const { title, subtitle, link, image } = data;
 
 	const containerRef = useRef(null);
@@ -47,7 +49,6 @@ export default function Cover({ data, addClass }: CoverProps) {
 			<Image
 				src={image.url}
 				alt={image.alt}
-				// quality={100}
 				fill
 				sizes="100vw"
 				style={{
@@ -64,14 +65,35 @@ export default function Cover({ data, addClass }: CoverProps) {
 				<h1
 					ref={titleRef}
 					className="uppercase text-gold text-reveal"
-				>{`${title}`}</h1>
+					dangerouslySetInnerHTML={{ __html: title }}
+				></h1>
+
+				{/* {pathname === "/" ? (
+					<h1
+						ref={titleRef}
+						className="uppercase text-gold text-reveal"
+						dangerouslySetInnerHTML={{ __html: title }}
+					>
+					</h1>
+				) : (
+					<h1
+						ref={titleRef}
+						className="uppercase text-gold text-reveal"
+					>
+					</h1>
+				)} */}
+				{/* <h1
+				 	ref={titleRef}
+				 	className="uppercase text-gold text-reveal"
+				 >{`${title}`}</h1> */}
 
 				{subtitle && (
 					<h2
 						ref={subtitleRef}
 						className="cover__subtitle text-reveal mb-4"
+						dangerouslySetInnerHTML={{ __html: subtitle }}
 					>
-						{subtitle}
+						{/* {subtitle} */}
 					</h2>
 				)}
 

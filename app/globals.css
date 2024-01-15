@@ -32,7 +32,7 @@ h6 {
 }
 h1,
 .text-1 {
-	@apply text-[2rem] md:text-[3.5rem] leading-normal uppercase;
+	@apply text-[2rem] md:text-[3.5rem] leading-normal;
 }
 h2,
 .text-2 {

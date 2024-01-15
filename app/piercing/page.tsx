@@ -18,9 +18,6 @@ import Jumbotron from "@/app/components/Jumbotron";
 
 async function getData(): Promise<PageState> {
 	const res = await fetch(process.env.API_PIERCING);
-	// const res = await fetch(
-	// 	"https://my-json-server.typicode.com/phyxius23/tattoo-be-piercing-contact/piercingPage"
-	// );
 	return res.json();
 }
 

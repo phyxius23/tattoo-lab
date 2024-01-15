@@ -7,10 +7,7 @@ import Jumbotron from "@/app/components/Jumbotron";
 import StudioSection from "@/app/components/StudioSection";
 
 async function getData(): Promise<HomeState> {
-	// const res = await fetch(process.env.API_HOMEPAGE);
-	const res = await fetch(
-		"https://my-json-server.typicode.com/phyxius23/tattoo-be-homepage/homePage"
-	);
+	const res = await fetch(process.env.API_HOMEPAGE);
 	return res.json();
 }
 

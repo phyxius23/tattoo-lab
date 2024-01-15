@@ -16,9 +16,6 @@ import Jumbotron from "@/app/components/Jumbotron";
 
 async function getData(): Promise<CrewState> {
 	const res = await fetch(process.env.API_ARTISTONE);
-	// const res = await fetch(
-	// 	"https://my-json-server.typicode.com/phyxius23/tattoo-be-artistone/tommyGrossiPage"
-	// );
 	return res.json();
 }
 
