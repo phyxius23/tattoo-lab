@@ -5,10 +5,49 @@ import {useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {usePathname} from "next/navigation";
+import Dropdown from "./Dropdown";
+
+export interface MenuItem {
+    title: string;
+    route?: string;
+    children?: MenuItem[];
+}
+
+const menuItems: MenuItem[] = [
+    {
+        title: "Home",
+        route: "/",
+    },
+    {
+        title: "Artisti",
+        children: [
+            {
+                title: "Tommy Grossi",
+                route: "/artista/tommy-grossi",
+            },
+            {
+                title: "Aura Negativa",
+                route: "/artista/aura-negativa",
+            },
+            {
+                title: "Tobias Paties",
+                route: "/artista/tobias-paties",
+            },
+        ],
+    },
+    {
+        title: "Piercing",
+        route: "/piercing",
+    },
+    {
+        title: "Contatti",
+        route: "/contatti",
+    },
+];
 
 export default function MyNavbar() {
     // serve per aprire/chiudere il menu da mobile
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState<boolean>(false);
     const pathname = usePathname();
 
     // ad ogni cambio pagina cambia il pathname, tramite useEffect chiudo la navbar
@@ -36,24 +75,20 @@ export default function MyNavbar() {
                 </div>
 
                 <ul className='navbar__menu'>
-                    <li className={pathname == "/" ? "font-bold text-gold" : ""}>
+                    {menuItems.map((item, index) => {
+                        return (
+                            <li key={index} className={pathname == item.route ? "font-bold text-gold" : ""}>
+                                {item.hasOwnProperty("children") ? (
+                                    <Dropdown item={item} />
+                                ) : (
+                                    <Link href={item?.route || ""}>{item.title}</Link>
+                                )}
+                            </li>
+                        )
+                    })}
+                    {/* <li className={pathname == "/" ? "font-bold text-gold" : ""}>
                         <Link href='/'>Home</Link>
-                    </li>
-                    <li className={pathname == "/artista/tommy-grossi" ? "font-bold text-gold" : ""}>
-                        <Link href='/artista/tommy-grossi'>Tommy Grossi</Link>
-                    </li>
-                    <li className={pathname == "/artista/aura-negativa" ? "font-bold text-gold" : ""}>
-                        <Link href='/artista/aura-negativa'>Aura Negativa</Link>
-                    </li>
-                    <li className={pathname == "/artista/tobias-paties" ? "font-bold text-gold" : ""}>
-                        <Link href='/artista/tobias-paties'>Tobias Paties</Link>
-                    </li>
-                    <li className={pathname == "/piercing" ? "font-bold text-gold" : ""}>
-                        <Link href='/piercing'>Piercing</Link>
-                    </li>
-                    <li className={pathname == "/contatti" ? "font-bold text-gold" : ""}>
-                        <Link href='/contatti'>Contatti</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </nav>

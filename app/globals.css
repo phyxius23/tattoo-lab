@@ -1,18 +1,10 @@
-/* Google Fonts */
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif&display=swap');*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition Variables */
-:root {
-	--color-navbar: #0f1010;
-	--color-dark: #1d1f21;
-	--color-gold: #d7b474;
-}
+/*  */
 body {
-	@apply bg-[--color-dark] text-white font-sans;
+	@apply bg-body text-white font-sans;
 }
 
 /* Title System */
@@ -75,27 +67,24 @@ textarea:focus-visible {
 /* Navbar */
 /* -------------------------------------------------------------------------------- */
 .navbar {
-	@apply fixed top-0 left-0 right-0 p-4 transition-all z-30 bg-[#0F1010]/100 md:bg-[#0F1010]/85;
+	@apply fixed top-0 left-0 right-0 p-4 transition-all z-30 bg-dark/100 md:bg-dark/85;
 }
 .navbar__content {
 	@apply max-w-screen-xl mx-auto flex justify-between items-center;
 }
 .navbar__menu {
-	@apply absolute top-full left-0 right-0 h-0 overflow-hidden flex flex-col items-center justify-around transition-all z-30
-            md:relative md:h-auto md:top-auto md:flex-row md:gap-0 bg-[#0F1010]/100 md:bg-transparent;
+	@apply absolute top-full left-0 right-0 h-0 flex flex-col items-center md:justify-around transition-all z-30
+            md:relative md:h-auto md:top-auto md:flex-row gap-16 md:gap-0 bg-dark/100 md:bg-transparent overflow-hidden md:overflow-visible;
 }
-.navbar__menu li {
-	@apply font-serif uppercase transition-all md:py-1.5 md:px-6 hover:text-gold;
+.navbar__menu > li {
+	@apply font-serif uppercase transition-all md:py-1.5 md:px-6 hover:text-gold relative;
 }
-.navbar__menu li:not(:last-child) {
+.navbar__menu > li:not(:last-child) {
 	@apply md:border-r-2;
 }
-.navbar__menu li a {
+.navbar__menu > li a {
 	@apply text-[1rem];
 }
-/*.navbar__menu li:hover {*/
-/*    @apply text-gold;*/
-/*}*/
 
 /* Burger Button */
 .navbar__burger {
@@ -150,10 +139,10 @@ textarea:focus-visible {
 	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .footer-contact a:hover {
-	@apply text-[--color-gold];
+	@apply text-gold;
 }
 .footer-privacy {
-	@apply py-5 bg-[#0f1010] text-[--color-gold];
+	@apply py-5 bg-dark text-gold;
 }
 
 /* Privacy */
@@ -161,7 +150,7 @@ textarea:focus-visible {
 	@apply flex flex-wrap items-center md:justify-between;
 }
 .footer-privacy a {
-	@apply font-serif text-[--color-gold] hover:text-white;
+	@apply font-serif text-gold hover:text-white;
 	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
