@@ -288,7 +288,7 @@ form .btn {
 	/* flex flex-wrap items-center md:justify-between */
 }
 .container-fluid {
-	@apply w-screen;
+	@apply w-screen max-w-full;
 	/* flex flex-wrap items-center md:justify-between */
 }
 .spacer-navbar {
