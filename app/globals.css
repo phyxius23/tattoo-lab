@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*  */
+/* General CSS */
 body {
 	@apply bg-body text-white font-sans;
 }
