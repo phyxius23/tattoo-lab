@@ -30,8 +30,8 @@ const menuItems: MenuItem[] = [
                 route: "/artista/aura-negativa",
             },
             {
-                title: "Tobias Paties",
-                route: "/artista/tobias-paties",
+                title: "Tobia Baser",
+                route: "/artista/tobia-baser",
             },
         ],
     },

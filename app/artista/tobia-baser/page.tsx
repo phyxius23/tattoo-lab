@@ -6,8 +6,8 @@ import Gallery from "@/app/components/Gallery";
 import Jumbotron from "@/app/components/Jumbotron";
 
 export const metadata = {
-	title: "Tobias Paties",
-	description: "Tobias Paties - Metadata Description",
+	title: "Tobia Baser",
+	description: "Tobia Baser - Metadata Description",
 	// you can also set openGraph metadata
 	//  openGraph: {
 	//      title: 'Piercing - Metadata Title',
