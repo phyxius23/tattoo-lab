@@ -2,6 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import { Montserrat, Noto_Serif } from "next/font/google";
 
+// Font Awesome
+import 'font-awesome/css/font-awesome.min.css';
+
 // CSS
 import "@splidejs/react-splide/css"; // Default Splide Theme
 import "./globals.css";

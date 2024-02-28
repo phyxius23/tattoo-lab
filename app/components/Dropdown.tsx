@@ -27,7 +27,8 @@ export default function Dropdown(props: DropdownProps) {
                 className="uppercase hidden md:block"
                 onClick={toggle}
             >
-                {item.title}
+                <span className="me-2">{item.title}</span>
+                <i className={`fa fa-caret-right transition ${isOpen ? "rotate-90" : ""}`} aria-hidden="true"></i>
             </button>
 
             <ul className={`flex text-center md:text-left md:absolute md:top-14 md:left-1/2 w-[200px] flex-col md:p-4 gap-16 md:gap-4 bg-dark/85 text-white z-50 ${transClass}`}>
