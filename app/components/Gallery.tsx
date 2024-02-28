@@ -65,9 +65,11 @@ export default function Gallery({ title, images }: GalleryProps) {
 											height={image.height}
 											className="img-fluid"
 										/>
-										<div className="gallery__label">
-											<figcaption>{image.title}</figcaption>
-										</div>
+										{image.title && 
+											<div className="gallery__label">
+												<figcaption>{image.title}</figcaption>
+											</div>
+										}
 									</figure>
 								</Link>
 							</SplideSlide>
