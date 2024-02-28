@@ -16,11 +16,11 @@ export const metadata = {
 };
 
 async function getData(): Promise<CrewState> {
-	const res = await fetch(process.env.API_ARTISTONE);
+	const res = await fetch(process.env.API_ARTISTTHREE!);
 	return res.json();
 }
 
-export default async function TobiasPatiesPage() {
+export default async function TobiaBaserPage() {
 	const {
 		coverSection,
 		biographySection,
@@ -57,10 +57,10 @@ export default async function TobiasPatiesPage() {
 					/>
 
 					{/* My Sketches | Gallery*/}
-					<Gallery
+					{/* <Gallery
 						title={sketchesSection.title}
 						images={sketchesSection.images}
-					/>
+					/> */}
 
 					{/* Piercing | Jumbotron */}
 					<Jumbotron
