@@ -46,7 +46,7 @@ export default function ArtistsSection({ title, bgImage, artists }: ArtistsSecti
 						rewind: true,
 						pagination: false,
 						autoWidth: false,
-						type: "loop",
+						type: "slide",
 						loop: true,
 						gap: "2.5rem",
 						breakpoints: {
@@ -82,7 +82,7 @@ export default function ArtistsSection({ title, bgImage, artists }: ArtistsSecti
 									</figure>
 
 									<h3 className="text-gold mb-4">{artist.title}</h3>
-									<p className="uppercase text-4">{artist.description}</p>
+									<p className="uppercase text-4 text-pretty">{artist.description}</p>
 								</div>
 							</SplideSlide>
 						);

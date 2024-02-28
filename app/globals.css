@@ -216,7 +216,7 @@ button.splide__arrow {
 	@apply content-[''] absolute top-0 left-0 w-full h-full z-10 bg-black/75;
 }
 .artists__card {
-	@apply bg-black/50 p-8 text-center;
+	@apply bg-black/50 p-8 text-center h-full;
 }
 
 /* Jumbotron | Section */
