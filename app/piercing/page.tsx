@@ -9,7 +9,7 @@ import Jumbotron from "@/app/components/Jumbotron";
 export const metadata = {
 	title: "Piercing",
 	description: "Piercing - Metadata Description",
-	// you can also set openGraph metadata
+	// you can also set openGraph metadata;
 	//  openGraph: {
 	//      title: 'Piercing - Metadata Title',
 	//      description: 'Piercing - Metadata Description',
