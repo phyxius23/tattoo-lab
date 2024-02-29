@@ -7,12 +7,29 @@ import Jumbotron from "@/app/components/Jumbotron";
 
 export const metadata = {
 	title: "Tommy Grossi",
-	description: "Tommy Grossi - Metadata Description",
+	description: "Scopri l'arte del tatuaggio traditional con un tocco marinaresco unico da Tommy Grossi, il talentuoso tatuatore e titolare di InKae Tattoo. Con sede a Venezia, Tommy infonde la sua passione per il tema marinaresco nei suoi tatuaggi, offrendo esperienze artistiche autentiche e indimenticabili. Esplora il suo portfolio e prenota una consulenza per trasformare la tua visione in un capolavoro permanente.",
 	// you can also set openGraph metadata
-	// openGraph: {
-	// 	title: "Piercing - Metadata Title",
-	// 	description: "Piercing - Metadata Description",
-	// },
+	openGraph: {
+		title: "Tommy Grossi | InKae Tattoo Venice",
+		description: "Scopri l'arte del tatuaggio traditional con un tocco marinaresco unico da Tommy Grossi, il talentuoso tatuatore e titolare di InKae Tattoo. Con sede a Venezia, Tommy infonde la sua passione per il tema marinaresco nei suoi tatuaggi, offrendo esperienze artistiche autentiche e indimenticabili. Esplora il suo portfolio e prenota una consulenza per trasformare la tua visione in un capolavoro permanente.",
+		url: "/artista/tommy-grossi",
+		siteName: "InKae Tattoo Venice",
+		images: [
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1698761154/inkaeTattooVenice/home/hersh4jbbgutfwkbzkhy.webp',
+			width: 800,
+			height: 600,
+		  },
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1698761154/inkaeTattooVenice/home/hersh4jbbgutfwkbzkhy.webp',
+			width: 1800,
+			height: 1600,
+			alt: 'Tommy Grossi mentre tatua presso InKae Tattoo',
+		  },
+		],
+		locale: 'it_IT',
+		type: 'website',
+	}
 };
 
 async function getData(): Promise<CrewState> {

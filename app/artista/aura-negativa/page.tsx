@@ -7,12 +7,29 @@ import Jumbotron from "@/app/components/Jumbotron";
 
 export const metadata = {
 	title: "Aura Negativa",
-	description: "Aura Negativa - Metadata Description",
+	description: "Esplora il mondo enigmatico di Aura Negativa, tatuatrice specializzata in soggetti in bianco e nero. Con una predilezione per temi occulti e simbologia esoterica, ma anche per la bellezza del mondo naturale, Aura offre un'esperienza unica nel tatuaggio. I suoi stili distintivi includono linework, blackwork, dotwork e ornamentale. Scopri il suo portfolio e lasciati trasportare dall'atmosfera misteriosa e affascinante dei suoi tatuaggi.",
 	// you can also set openGraph metadata
-	//  openGraph: {
-	//      title: 'Piercing - Metadata Title',
-	//      description: 'Piercing - Metadata Description',
-	//  },
+	openGraph: {
+		title: "Aura Negativa | InKae Tattoo Venice",
+		description: "Esplora il mondo enigmatico di Aura Negativa, tatuatrice specializzata in soggetti in bianco e nero. Con una predilezione per temi occulti e simbologia esoterica, ma anche per la bellezza del mondo naturale, Aura offre un'esperienza unica nel tatuaggio. I suoi stili distintivi includono linework, blackwork, dotwork e ornamentale. Scopri il suo portfolio e lasciati trasportare dall'atmosfera misteriosa e affascinante dei suoi tatuaggi.",
+		url: "/artista/aura-negativa",
+		siteName: "InKae Tattoo Venice",
+		images: [
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1698761150/inkaeTattooVenice/home/w6rl8enepdi4bclhdl2w.webp',
+			width: 800,
+			height: 600,
+		  },
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1698761150/inkaeTattooVenice/home/w6rl8enepdi4bclhdl2w.webp',
+			width: 1800,
+			height: 1600,
+			alt: 'Aura Negativa mentre tatua presso InKae Tattoo',
+		  },
+		],
+		locale: 'it_IT',
+		type: 'website',
+	}
 };
 
 async function getData(): Promise<CrewState> {

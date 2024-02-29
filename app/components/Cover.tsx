@@ -54,6 +54,7 @@ export default function Cover({ data, addClass }: CoverProps) {
 					objectPosition: "center",
 				}}
 				priority={true}
+				fetchPriority="high"
 			/>
 
 			<div

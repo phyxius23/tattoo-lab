@@ -7,12 +7,29 @@ import Jumbotron from "@/app/components/Jumbotron";
 
 export const metadata = {
 	title: "Tobia Baser",
-	description: "Tobia Baser - Metadata Description",
+	description: "Scopri l'eclettismo artistico di Tobia Baser, rinomato tatuatore e celebre esponente della street art italiana. Attratto dai colori brillanti e dalle linee marcate, Tobia porta la sua esperienza dei graffiti nel mondo dei tattoo, specializzandosi negli stili tradizionale americano, giapponese e fine line. Esplora il suo portfolio e lasciati ispirare dalla sua visione unica del tatuaggio, dove arte e cultura si fondono per creare opere straordinarie e indimenticabili.",
 	// you can also set openGraph metadata
-	//  openGraph: {
-	//      title: 'Piercing - Metadata Title',
-	//      description: 'Piercing - Metadata Description',
-	//  },
+	openGraph: {
+		title: "Tobia Baser | InKae Tattoo Venice",
+		description: "Scopri l'eclettismo artistico di Tobia Baser, rinomato tatuatore e celebre esponente della street art italiana. Attratto dai colori brillanti e dalle linee marcate, Tobia porta la sua esperienza dei graffiti nel mondo dei tattoo, specializzandosi negli stili tradizionale americano, giapponese e fine line. Esplora il suo portfolio e lasciati ispirare dalla sua visione unica del tatuaggio, dove arte e cultura si fondono per creare opere straordinarie e indimenticabili.",
+		url: "/artista/tobia-baser",
+		siteName: "InKae Tattoo Venice",
+		images: [
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1709125658/inkaeTattooVenice/home/pbrgfukyp9zbovqwseoj.webp',
+			width: 800,
+			height: 600,
+		  },
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1709125658/inkaeTattooVenice/home/pbrgfukyp9zbovqwseoj.webp',
+			width: 1800,
+			height: 1600,
+			alt: 'Tobia Baser mentre tatua presso InKae Tattoo',
+		  },
+		],
+		locale: 'it_IT',
+		type: 'website',
+	}
 };
 
 async function getData(): Promise<CrewState> {

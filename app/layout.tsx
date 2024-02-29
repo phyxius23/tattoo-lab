@@ -35,16 +35,36 @@ const noto_serif = Noto_Serif({
 // 	metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
 // };
 
+
 // Metadata
 export const metadata: Metadata = {
+	metadataBase: new URL("https://tattoo-lab.vercel.app"),
 	title: {
 		template: "%s | InKae Tattoo Venice",
 		default: "InKae Tattoo Venice",
 	},
-	//  title: 'InKae Tattoo Venice',
-	description:
-		"Siamo specializzati in Traditional Tattoo e Blackwork ma eseguiamo qualunque tipo di tatuaggio. Dai sfogo alla tua fantasia!",
-	metadataBase: new URL("https://tattoo-lab.vercel.app/"),
+	description: "Benvenuto nell'universo artistico di InKae Tattoo, dove l'arte del tatuaggio si fonde con l'unicità di Venezia. Scopri come trasformare la tua esperienza veneziana con i nostri tatuaggi e piercing di alta qualità. Abbraccia la bellezza della nostra città attraverso la tua personale opera d'arte sulla pelle.",
+	openGraph: {
+		title: "InKae Tattoo Venice",
+		description: "Benvenuto nell'universo artistico di InKae Tattoo, dove l'arte del tatuaggio si fonde con l'unicità di Venezia. Scopri come trasformare la tua esperienza veneziana con i nostri tatuaggi e piercing di alta qualità. Abbraccia la bellezza della nostra città attraverso la tua personale opera d'arte sulla pelle.",
+		url: "/",
+		siteName: "InKae Tattoo Venice",
+		images: [
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1698761150/inkaeTattooVenice/home/z6p8jeemhzd3pppqe78m.webp',
+			width: 800,
+			height: 600,
+		  },
+		  {
+			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1698761150/inkaeTattooVenice/home/z6p8jeemhzd3pppqe78m.webp',
+			width: 1800,
+			height: 1600,
+			alt: 'Piratessa di InKae Tattoo',
+		  },
+		],
+		locale: 'it_IT',
+		type: 'website',
+	}
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

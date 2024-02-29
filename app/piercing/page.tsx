@@ -8,12 +8,29 @@ import Jumbotron from "@/app/components/Jumbotron";
 
 export const metadata = {
 	title: "Piercing",
-	description: "Piercing - Metadata Description",
+	description: "Scopri il servizio di piercing di altissima qualità offerto da Sebap Pesce presso lo studio InKae Tattoo. Con oltre un decennio di esperienza nel settore, Sebap ti garantisce professionalità e sicurezza. Scegli la precisione e l'esperienza per il tuo piercing.",
 	// you can also set openGraph metadata;
-	//  openGraph: {
-	//      title: 'Piercing - Metadata Title',
-	//      description: 'Piercing - Metadata Description',
-	//  },
+	openGraph: {
+		title: "Piercing | InKae Tattoo Venice",
+		description: "Scopri il servizio di piercing di altissima qualità offerto da Sebap Pesce presso lo studio InKae Tattoo. Con oltre un decennio di esperienza nel settore, Sebap ti garantisce professionalità e sicurezza. Scegli la precisione e l'esperienza per il tuo piercing.",
+		url: "/piercing",
+		siteName: "InKae Tattoo Venice",
+		images: [
+			{
+				url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1709138333/inkaeTattooVenice/piercing/inrmaefckkayuiz7lenn.webp',
+				width: 800,
+				height: 600,
+			},
+			{
+				url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1709138333/inkaeTattooVenice/piercing/inrmaefckkayuiz7lenn.webp',
+				width: 1800,
+				height: 1600,
+				alt: 'Piercing sulla bocca eseguito da Sebap Pesce presso InKae Tattoo',
+			},
+		],
+		locale: 'it_IT',
+		type: 'website',
+	}
 };
 
 async function getData(): Promise<PageState> {
