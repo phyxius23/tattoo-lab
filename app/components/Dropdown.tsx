@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MenuItem } from "./MyNavbar";
 import { useState } from "react";
+import MySVGComponent from "./MySVGComponent";
 
 interface DropdownProps {
     item: MenuItem;
@@ -24,11 +25,13 @@ export default function Dropdown(props: DropdownProps) {
     return (
         <>
             <button
-                className="uppercase hidden md:block"
+                className="uppercase hidden md:flex md:items-center"
                 onClick={toggle}
             >
                 <span className="me-2">{item.title}</span>
-                <i className={`fa fa-caret-right transition ${isOpen ? "rotate-90" : ""}`} aria-hidden="true"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 ${isOpen ? "rotate-90" : ""}`} viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M184 112l144 144-144 144"/>
+                </svg>
             </button>
 
             <ul className={`flex text-center md:text-left md:absolute md:top-14 md:left-1/2 w-[200px] flex-col md:p-4 gap-16 md:gap-4 bg-dark/85 text-white z-50 ${transClass}`}>

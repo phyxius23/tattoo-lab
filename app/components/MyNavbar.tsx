@@ -26,10 +26,6 @@ const menuItems: MenuItem[] = [
                 route: "/artista/tommy-grossi",
             },
             {
-                title: "Aura Negativa",
-                route: "/artista/aura-negativa",
-            },
-            {
                 title: "Tobia Baser",
                 route: "/artista/tobia-baser",
             },
