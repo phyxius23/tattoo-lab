@@ -41,23 +41,17 @@ export default function ArtistsSection({ title, bgImage, artists }: ArtistsSecti
 				<Splide
 					aria-label="My Favorite Imagess"
 					options={{
-						mediaQuery: "min",
+						type: "loop",
+						mediaQuery: 'min',
 						perPage: 1,
-						rewind: true,
-						pagination: false,
-						autoWidth: false,
-						type: "slide",
-						loop: true,
 						gap: "2.5rem",
+						pagination: false,
 						breakpoints: {
-							768: {
-								perPage: 2,
-							},
-							1024: {
-								perPage: 3,
-							},
-						},
-					}}
+							  768: {
+								  destroy: true,
+							  },
+						}
+					  }}
 				>
 					{artists?.map((artist) => {
 						return (
