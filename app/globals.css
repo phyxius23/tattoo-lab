@@ -52,7 +52,6 @@ h6,
 /* Button System */
 /* -------------------------------------------------------------------------------- */
 .btn {
-	/*@apply inline-block text-[--color-gold] bg-[#d7b474]/[.4] border-2 border-[#d7b474]/0 hover:bg-[#d7b474]/[.0] hover:border-[#d7b474]/100 uppercase py-4 px-8 ;*/
 	@apply inline-block text-gold bg-gold/[.4] border-2 border-gold/0 hover:bg-gold/[.0] hover:border-gold/100 uppercase py-4 px-8;
 	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -165,7 +164,6 @@ textarea:focus-visible {
 .cover__content {
 	@apply max-w-[815px] relative z-10;
 }
-/* questo nella pagina contatti non è presente magari torna utile nelle altre */
 .cover__content h2 {
 	@apply font-sans text-[1.1rem] md:text-[1.3rem] font-bold leading-[1.75] tracking-[1px] uppercase;
 }
@@ -257,35 +255,9 @@ button.splide__arrow {
 
 /* Contact | Page */
 /* -------------------------------------------------------------------------------- */
-.form-container p {
-	@apply mb-4;
-	/*  last-of-type:mb-0  */
+.contact-container p {
+	@apply mb-4 last-of-type:mb-0;
 }
-/* Form */
-input[type="text"],
-input[type="email"],
-textarea {
-	@apply w-full bg-white/10 text-white resize-none p-2.5 mb-5;
-}
-form label:not(.label-policy) {
-	@apply block text-gold font-bold uppercase mb-2.5;
-}
-form .label-policy {
-	@apply inline ml-2.5;
-}
-form .btn {
-	@apply block;
-}
-/*.wpcf7-not-valid-tip{*/
-/*    color: #fff;*/
-/*    font-size: 13px;*/
-/*}*/
-/*.wp-block-button__link:active,*/
-/*.wp-block-button__link:focus,*/
-/*.wp-block-button__link:hover,*/
-/*.wp-block-button__link:visited{*/
-/*    color: #D7B474;*/
-/*}*/
 
 /* Utilities */
 /* -------------------------------------------------------------------------------- */
@@ -326,9 +298,6 @@ form .btn {
 .slide-left-bis figure {
 	@apply relative left-[-500px];
 }
-/*.slide-left-bis figure {*/
-/*    @apply relative left-[-500px];*/
-/*}*/
 
 /* funziona */
 .biography .text > div {
