@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import CookieBanner from "./CookieBanner";
 
 export default function MyFooter() {
+	const year = new Date().getFullYear();
+
 	return (
 		<footer className="footer">
+			<CookieBanner />
 			<div className="footer-contact container">
 				<div className="basis-full md:basis-1/3 p-2.5">
 					<h4 className="text-6 font-bold mb-2">InKae di Tommy Grossi</h4>
@@ -57,7 +61,7 @@ export default function MyFooter() {
 								+39 328 66 10 341
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Image
 								src="/icons/mail.svg"
 								alt=""
@@ -70,7 +74,7 @@ export default function MyFooter() {
 							>
 								tommygrossi77@yahoo.it
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Image
 								src="/icons/logo-instagram.svg"
@@ -93,8 +97,9 @@ export default function MyFooter() {
 					<h4 className="text-6 font-bold uppercase mb-2">Orari</h4>
 
 					<ul className="footer-contact__menu text-6">
-						<li>Lun - Sab: 10.00 - 13.00 / 14.30 - 18.00</li>
-						<li>Dom: CHIUSO</li>
+						<li>Vedi pagina Instagram per orari aggiornati</li>
+						{/* <li>Lun - Sab: 10.00 - 13.00 / 14.30 - 18.00</li> */}
+						{/* <li>Dom: CHIUSO</li> */}
 					</ul>
 				</div>
 			</div>
@@ -102,18 +107,18 @@ export default function MyFooter() {
 			<div className="footer-privacy">
 				<div className="footer-privacy__content container">
 					<div className="basis-full px-2.5 md:basis-5/12">
-						<h5 className="text- 6 font-normal">
-							INKAE di Tommaso Grossi © Copyright 2020. Tutti i diritti riservati.
+						<h5 className="text-6 font-normal">
+							INKAE di Tommaso Grossi © Copyright {year}. Tutti i diritti riservati.
 						</h5>
 					</div>
 
 					<div className="basis-full px-2.5 md:basis-5/12 md:text-right">
-						<Link
+						{/* <Link
 							className="text-6"
 							href=""
 						>
 							Privacy e Cookie Policy
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 			</div>
