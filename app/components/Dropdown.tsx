@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { MenuItem } from "./MyNavbar";
 import { useState } from "react";
-import MySVGComponent from "./MySVGComponent";
 
 interface DropdownProps {
     item: MenuItem;
