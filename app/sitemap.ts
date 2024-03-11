@@ -26,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${process.env.NEXT_PUBLIC_BASE_URL}/contatti`,
             lastModified: new Date(),
             priority: 0.6
-        },
-
+        }
     ]
 }
