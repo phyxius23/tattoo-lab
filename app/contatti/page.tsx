@@ -10,13 +10,13 @@ export const metadata = {
 	description: "Contatti - Metadata Description",
 	// you can also set openGraph metadata
 	//  openGraph: {
-	//      title: 'Piercing - Metadata Title',
-	//      description: 'Piercing - Metadata Description',
+	//      title: 'Contatti - Metadata Title',
+	//      description: 'Contatti - Metadata Description',
 	//  },
 };
 
 async function getData(): Promise<PageState> {
-	const res = await fetch(process.env.API_CONTACT);
+    const res = await fetch(process.env.NEXT_MYJSON_BASE_URL + process.env.NEXT_API_CONTACTPAGE);
 	return res.json();
 }
 
@@ -26,12 +26,10 @@ export default async function Contact() {
     return (
         <>
             {/* Hero Section */}
-			{coverSection && (
-				<Cover
-					data={coverSection}
-					addClass="cover--image"
-				/>
-			)}
+			<Cover
+				data={coverSection}
+				addClass="cover--image"
+			/>
 
             <main className="contact-main">
                 <article className="article">
@@ -93,17 +91,21 @@ export default async function Contact() {
                     </section>
 
                     {/* Our Crew | Artists Section */}
-					<ArtistsSection
-						title={crewSection.title}
-						bgImage={crewSection.image}
-						artists={crewSection.artists}
-					/>
+                    {crewSection && 
+                        <ArtistsSection
+                            title={crewSection.title}
+                            bgImage={crewSection.image}
+                            artists={crewSection.artists}
+                        />		
+                    }
 
 					{/* Piercing | Jumbotron */}
-					<Jumbotron
-						data={piercingSection}
-						addClass="piercing"
-					/>
+                    {piercingSection &&
+                        <Jumbotron
+                            data={piercingSection}
+                            addClass="piercing"
+                        />
+                    }
                 </article>
             </main>
         </>

@@ -1,4 +1,4 @@
-import { HomeState } from "@/app/models";
+import { PageState } from "@/app/models";
 
 import Cover from "@/app/components/Cover";
 import ArtistsSection from "@/app/components/ArtistsSection";
@@ -6,8 +6,8 @@ import Gallery from "@/app/components/Gallery";
 import Jumbotron from "@/app/components/Jumbotron";
 import StudioSection from "@/app/components/StudioSection";
 
-async function getData(): Promise<HomeState> {
-	const res = await fetch(process.env.API_HOMEPAGE);
+async function getData(): Promise<PageState> {
+	const res = await fetch(process.env.NEXT_MYJSON_BASE_URL + process.env.NEXT_API_HOMEPAGE);
 	return res.json();
 }
 
@@ -28,32 +28,40 @@ export default async function Home() {
 
 			<main>
 				{/* Biography | MediaText */}
-				<StudioSection data={studioSection} />
+				{studioSection && <StudioSection data={studioSection} />}
 
 				{/* Our Crew | Artists Section */}
-				<ArtistsSection
-					title={crewSection.title}
-					bgImage={crewSection.image}
-					artists={crewSection.artists}
-				/>
+				{crewSection && 
+					<ArtistsSection
+						title={crewSection.title}
+						bgImage={crewSection.image}
+						artists={crewSection.artists}
+					/>		
+				}
 
 				{/* My Works | Gallery*/}
-				<Gallery
-					title={worksSection.title}
-					images={worksSection.images}
-				/>
+				{worksSection &&
+					<Gallery
+						title={worksSection.title}
+						images={worksSection.images}
+					/>
+				}
 
 				{/* Piercing | Jumbotron */}
-				<Jumbotron
-					data={piercingSection}
-					addClass="piercing"
-				/>
+				{piercingSection &&
+					<Jumbotron
+						data={piercingSection}
+						addClass="piercing"
+					/>
+				}
 
 				{/* Contact Us | Jumbotron */}
-				<Jumbotron
-					data={contactSection}
-					addClass="contact"
-				/>
+				{contactSection &&
+					<Jumbotron
+						data={contactSection}
+						addClass="contact"
+					/>
+				}
 			</main>
 		</>
 	);

@@ -11,10 +11,10 @@ export const metadata = {
 	description: "Scopri il servizio di piercing di altissima qualità offerto da Sebap Pesce presso lo studio InKae Tattoo. Con oltre un decennio di esperienza nel settore, Sebap ti garantisce professionalità e sicurezza. Scegli la precisione e l'esperienza per il tuo piercing.",
 	// you can also set openGraph metadata;
 	openGraph: {
-		title: "Piercing | InKae Tattoo Venice",
+		title: "Piercing | InKae Tattoo Venezia",
 		description: "Scopri il servizio di piercing di altissima qualità offerto da Sebap Pesce presso lo studio InKae Tattoo. Con oltre un decennio di esperienza nel settore, Sebap ti garantisce professionalità e sicurezza. Scegli la precisione e l'esperienza per il tuo piercing.",
 		url: "/piercing",
-		siteName: "InKae Tattoo Venice",
+		siteName: "InKae Tattoo Venezia",
 		images: [
 			{
 				url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1709138333/inkaeTattooVenice/piercing/inrmaefckkayuiz7lenn.webp',
@@ -34,7 +34,7 @@ export const metadata = {
 };
 
 async function getData(): Promise<PageState> {
-	const res = await fetch(process.env.API_PIERCING);
+	const res = await fetch(process.env.NEXT_MYJSON_BASE_URL + process.env.NEXT_API_PIERCINGPAGE);
 	return res.json();
 }
 
@@ -45,23 +45,22 @@ export default async function PiercingPage() {
 	return (
 		<>
 			{/* Hero Section */}
-			{coverSection && (
-				<Cover
-					data={coverSection}
-					addClass="cover--image"
-				/>
-			)}
+			<Cover
+				data={coverSection}
+				addClass="cover--image"
+			/>
 
 			<main className="piercing-main">
 				<article className="article">
 					{/* Biography | MediaText */}
 					{biographySection && (
 						<section className="container py-12 md:py-20">
-							<MediaText
-								data={biographySection.mediaText[0]}
-								addClass="biography"
-								// scroll={500}
-							/>
+							{biographySection &&
+								<MediaText
+									data={biographySection.mediaText[0]}
+									addClass="biography"
+								/>
+							}
 						</section>
 					)}
 
@@ -74,11 +73,13 @@ export default async function PiercingPage() {
 					)}
 
 					{/* Our Crew | Artists Section */}
-					<ArtistsSection
-						title={crewSection.title}
-						bgImage={crewSection.image}
-						artists={crewSection.artists}
-					/>
+					{crewSection && 
+						<ArtistsSection
+							title={crewSection.title}
+							bgImage={crewSection.image}
+							artists={crewSection.artists}
+						/>		
+					}
 
 					{/* Contact Us | Jumbotron */}
 					{contactSection && (

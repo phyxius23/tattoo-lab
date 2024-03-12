@@ -23,29 +23,19 @@ const noto_serif = Noto_Serif({
 	display: "swap",
 });
 
-// export const metadata: Metadata = {
-// 	title: {
-// 		template: "%s | Acme Dashboard",
-// 		default: "Acme Dashboard",
-// 	},
-// 	description: "The official Next.js Learn Dashboard built with App Router.",
-// 	metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
-// };
-
-
 // Metadata
 export const metadata: Metadata = {
-	metadataBase: new URL("https://tattoo-lab.vercel.app"),
+	metadataBase: new URL("https://www.inkaetattoovenezia.it/"),
 	title: {
-		template: "%s | InKae Tattoo Venice",
-		default: "InKae Tattoo Venice",
+		template: "%s | InKae Tattoo Venezia",
+		default: "InKae Tattoo Venezia",
 	},
 	description: "Benvenuto nell'universo artistico di InKae Tattoo, dove l'arte del tatuaggio si fonde con l'unicità di Venezia. Scopri come trasformare la tua esperienza veneziana con i nostri tatuaggi e piercing di alta qualità. Abbraccia la bellezza della nostra città attraverso la tua personale opera d'arte sulla pelle.",
 	openGraph: {
-		title: "InKae Tattoo Venice",
+		title: "InKae Tattoo Venezia",
 		description: "Benvenuto nell'universo artistico di InKae Tattoo, dove l'arte del tatuaggio si fonde con l'unicità di Venezia. Scopri come trasformare la tua esperienza veneziana con i nostri tatuaggi e piercing di alta qualità. Abbraccia la bellezza della nostra città attraverso la tua personale opera d'arte sulla pelle.",
 		url: "/",
-		siteName: "InKae Tattoo Venice",
+		siteName: "InKae Tattoo Venezia",
 		images: [
 		  {
 			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1698761150/inkaeTattooVenice/home/z6p8jeemhzd3pppqe78m.webp',
@@ -70,7 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			lang="it"
 			className={`${montserrat.variable} ${noto_serif.variable}`}
 		>
-			{/*<body className='overflow-x-hidden'>*/}
 			<body>
 				<MyNavbar />
 

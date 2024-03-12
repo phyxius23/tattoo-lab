@@ -1,4 +1,4 @@
-import { CrewState } from "@/app/models";
+import { PageState } from "@/app/models";
 
 import Cover from "@/app/components/Cover";
 import MediaText from "@/app/components/MediaText";
@@ -10,10 +10,10 @@ export const metadata = {
 	description: "Scopri l'eclettismo artistico di Tobia Baser, rinomato tatuatore e celebre esponente della street art italiana. Attratto dai colori brillanti e dalle linee marcate, Tobia porta la sua esperienza dei graffiti nel mondo dei tattoo, specializzandosi negli stili tradizionale americano, giapponese e fine line. Esplora il suo portfolio e lasciati ispirare dalla sua visione unica del tatuaggio, dove arte e cultura si fondono per creare opere straordinarie e indimenticabili.",
 	// you can also set openGraph metadata
 	openGraph: {
-		title: "Tobia Baser | InKae Tattoo Venice",
+		title: "Tobia Baser | InKae Tattoo Venezia",
 		description: "Scopri l'eclettismo artistico di Tobia Baser, rinomato tatuatore e celebre esponente della street art italiana. Attratto dai colori brillanti e dalle linee marcate, Tobia porta la sua esperienza dei graffiti nel mondo dei tattoo, specializzandosi negli stili tradizionale americano, giapponese e fine line. Esplora il suo portfolio e lasciati ispirare dalla sua visione unica del tatuaggio, dove arte e cultura si fondono per creare opere straordinarie e indimenticabili.",
 		url: "/artista/tobia-baser",
-		siteName: "InKae Tattoo Venice",
+		siteName: "InKae Tattoo Venezia",
 		images: [
 		  {
 			url: 'https://res.cloudinary.com/dqnclur2i/image/upload/v1709125658/inkaeTattooVenice/home/pbrgfukyp9zbovqwseoj.webp',
@@ -32,8 +32,8 @@ export const metadata = {
 	}
 };
 
-async function getData(): Promise<CrewState> {
-	const res = await fetch(process.env.API_ARTISTTHREE!);
+async function getData(): Promise<PageState> {
+	const res = await fetch(process.env.NEXT_MYJSON_BASE_URL + process.env.NEXT_API_TOBIAPAGE);
 	return res.json();
 }
 
@@ -50,46 +50,54 @@ export default async function TobiaBaserPage() {
 	return (
 		<>
 			{/* Hero Section */}
-			{coverSection && (
-				<Cover
-					data={coverSection}
-					addClass="cover--image"
-				/>
-			)}
+			<Cover
+				data={coverSection}
+				addClass="cover--image"
+			/>
 
 			<main className="artist-main">
 				<article className="article">
 					{/* Biography | MediaText */}
 					<section className="container py-12 md:py-20">
-						<MediaText
-							data={biographySection.mediaText[0]}
-							addClass="biography"
-						/>
+						{biographySection &&
+							<MediaText
+								data={biographySection.mediaText[0]}
+								addClass="biography"
+							/>
+						}
 					</section>
 
 					{/* My Works | Gallery*/}
-					<Gallery
-						title={worksSection.title}
-						images={worksSection.images}
-					/>
+					{worksSection &&
+						<Gallery
+							title={worksSection.title}
+							images={worksSection.images}
+						/>				
+					}
 
-					{/* My Sketches | Gallery*/}
-					{/* <Gallery
-						title={sketchesSection.title}
-						images={sketchesSection.images}
-					/> */}
+					{/* My Sketches | Gallery */}
+					{/* {sketchesSection &&
+						<Gallery
+							title={sketchesSection.title}
+							images={sketchesSection.images}
+						/>
+					} */}
 
 					{/* Piercing | Jumbotron */}
-					<Jumbotron
-						data={piercingSection}
-						addClass="piercing"
-					/>
+					{piercingSection &&
+						<Jumbotron
+							data={piercingSection}
+							addClass="piercing"
+						/>
+					}
 
 					{/* Contact Us | Jumbotron */}
-					<Jumbotron
-						data={contactSection}
-						addClass="contact"
-					/>
+					{contactSection &&
+						<Jumbotron
+							data={contactSection}
+							addClass="contact"
+						/>
+					}
 				</article>
 			</main>
 		</>
