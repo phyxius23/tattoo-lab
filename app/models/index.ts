@@ -1,28 +1,12 @@
-export interface HomeState {
-    coverSection: CoverState;
-    studioSection: BiographyState;
-    crewSection: CrewState;
-    worksSection: GalleryState;
-    piercingSection: JumbotronState;
-    contactSection: JumbotronState;
-}
-
-export interface CrewState {
-    coverSection: CoverState;
-    biographySection: BiographyState;
-    worksSection: GalleryState;
-    sketchesSection: GalleryState;
-    piercingSection: JumbotronState;
-    contactSection: JumbotronState;
-}
-
 export interface PageState {
-    coverSection: CoverState;
-    biographySection?: BiographyState;
-    worksSection?: GalleryState;
-    crewSection: CrewState;
-    piercingSection: JumbotronState;
-    contactSection?: JumbotronState;
+    coverSection: CoverState;           // home, tobia, tommy, piercing, contatti
+    studioSection?: BiographyState;     // home
+    crewSection?: CrewState;            // home, contatti, piercing
+    worksSection?: GalleryState;        // home, tobia, tommy, piercing
+    piercingSection?: JumbotronState;   // home, tobia, tommy, contatti
+    contactSection?: JumbotronState;    // home, tobia, tommy, piercing
+    biographySection?: BiographyState;  // tobia, tommy, piercing
+    sketchesSection?: GalleryState;     // tobia, tommy
 }
 
 export interface CoverState {
@@ -91,34 +75,3 @@ export interface ArtistState {
     description: string;
     image: ImageState;
 }
-
-export interface FormState {
-    name: string;
-    email: string;
-    message: string;
-    privacy: boolean;
-}
-
-// export interface StudioSectionState {
-//     title: string;
-//     image?: ImageState;
-//     mediaText: MediaTextState[]
-// }
-
-// export interface SketchesSection {
-//     title: string;
-//     images: ImageState[];
-// }
-
-// export interface ContactState {
-//     id: String;
-//     title: String;
-//     btnHref: String;
-//     btnText: String;
-// }
-
-// export interface MediaTextProps {
-//     media: string;
-//     data: MediaText[];
-//     addClass: string;
-// }
