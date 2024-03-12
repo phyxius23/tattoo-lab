@@ -82,9 +82,6 @@ export default function MyNavbar() {
                             </li>
                         )
                     })}
-                    {/* <li className={pathname == "/" ? "font-bold text-gold" : ""}>
-                        <Link href='/'>Home</Link>
-                    </li> */}
                 </ul>
             </div>
         </nav>

@@ -61,20 +61,6 @@ export default function MyFooter() {
 								+39 328 66 10 341
 							</Link>
 						</li>
-						{/* <li>
-							<Image
-								src="/icons/mail.svg"
-								alt=""
-								width={16}
-								height={16}
-							/>
-							<Link
-								href="mailto:tommygrossi77@yahoo.it"
-								className="text-6 text-white"
-							>
-								tommygrossi77@yahoo.it
-							</Link>
-						</li> */}
 						<li>
 							<Image
 								src="/icons/logo-instagram.svg"
@@ -98,8 +84,6 @@ export default function MyFooter() {
 
 					<ul className="footer-contact__menu text-6">
 						<li>Vedi pagina Instagram per orari aggiornati</li>
-						{/* <li>Lun - Sab: 10.00 - 13.00 / 14.30 - 18.00</li> */}
-						{/* <li>Dom: CHIUSO</li> */}
 					</ul>
 				</div>
 			</div>
@@ -113,12 +97,23 @@ export default function MyFooter() {
 					</div>
 
 					<div className="basis-full px-2.5 md:basis-5/12 md:text-right">
-						{/* <Link
-							className="text-6"
-							href=""
-						>
-							Privacy e Cookie Policy
-						</Link> */}
+						{/* <p className="text-6">
+							<Link
+								className="text-6 me-1"
+								href=""
+								target="_blank"
+							>
+								Privacy Policy
+							</Link>
+								e
+							<Link
+								className="text-6 ms-1"
+								href=""
+								target="_blank"
+							>
+								Cookie Policy
+							</Link>
+						</p> */}
 					</div>
 				</div>
 			</div>
