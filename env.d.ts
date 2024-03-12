@@ -1,9 +1,11 @@
 declare namespace NodeJS {
 	interface ProcessEnv {
-		API_HOMEPAGE: string;
-		API_ARTISTONE: string;
-		API_ARTISTTWO: string;
-		API_PIERCING: string;
-		API_CONTACT: string;
+		NEXT_PUBLIC_BASE_URL: string;
+		NEXT_MYJSON_BASE_URL: string;
+		NEXT_API_HOMEPAGE: string;
+		NEXT_API_TOMMYPAGE: string;
+		NEXT_API_TOBIAPAGE: string;
+		NEXT_API_PIERCINGPAGE: string;
+		NEXT_API_CONTACTPAGE: string;
 	}
 }
